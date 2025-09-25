@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Website</title>
+    <style>
+        body {
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de tareas</h1>
+    <ul>
+        <li>Tareas</li>
+    </ul>
+    <input type="text" placeholder="Nueva tarea">
+    <button onclick="add()">Agregar</button>
+    <script>
+        function add() {
+            const ul = document.querySelector("ul");
+            console.log(ul);
+            const input = document.querySelector("input");
+            console.log(input);
+            const li = document.createElement("li");
+            li.textContent = input.value;
+            ul.appendChild(li);
+            input.value = "";
+        }
+        
+    </script>
+</body>
+</html>
