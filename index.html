@@ -1,22 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Website</title>
+    <title>mi lista de tareas</title>
     <style>
-        body {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
 
+        }
+        body {
+            font-size: 20px;
+            background-color: #d8a790;
+            display: grid;
+            justify-items: center;
+            align-items: column;
+            
+        }
+        h1 {
+            margin: 20px;
+        }
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+            background-color: #764b36;
+            border-radius: 15px;
+            padding: 1px;
+        }
+        input {
+            color: #efe7dd;
+            font-size: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            margin-right: 10px;
+            background-color: #764b36;
+        }
+        input::placeholder {
+         color: #efe7dd; 
+        }
+        button {
+            font-size: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 15px;
+            background-color: #764b36;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #764b36;
+        }
+        li {
+            color: #efe7dd;
+            margin: 10px 0;
+            background-color: #e9dcd6(202, 220, 235);
+            padding: 7px;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>Lista de tareas</h1>
+        <h1>Lista de tareas</h1>
     <ul>
         <li>Tareas</li>
     </ul>
-    <input type="text" placeholder="Nueva tarea">
+    <input type="text" placeholder="Nueva tarea" required/>
     <button onclick="add()">Agregar</button>
     <script>
         function add() {
+
             const ul = document.querySelector("ul");
             console.log(ul);
             const input = document.querySelector("input");
